@@ -24,12 +24,20 @@ let litCandles = 0;
         }
 
         // Listen for spacebar to blow out candles
-        document.addEventListener('keydown', function(event) {
-            if (event.code === 'Space' && allCandlesLit) {
-                event.preventDefault();
-                blowOutCandles();
-            }
-        });
+       // Listen for spacebar (desktop) or tap/click (mobile)
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space' && allCandlesLit) {
+        event.preventDefault();
+        blowOutCandles();
+    }
+});
+
+document.addEventListener('click', function() {
+    if (allCandlesLit) {
+        blowOutCandles();
+    }
+});
+
 
         function blowOutCandles() {
             const candles = document.querySelectorAll('.candle.lit');
