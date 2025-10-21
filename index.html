@@ -5,47 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Ulang Tahun Revianti ❤️</title>
     <link rel="stylesheet" href="style.css">
-    
-
 </head>
 <body>
     <div class="love-background" id="loveBackground"></div>
     <div class="hearts" id="hearts"></div>
     
+    <!-- Music Notification -->
+    <div class="music-notification" id="musicNotification">
+        Klik di mana saja untuk memulai musik romantis 🎵
+    </div>
+
     <div class="container">
         <h1 class="title">Selamat Ulang Tahun Revianti!</h1>
         <p class="subtitle">Hari yang paling istimewa untuk orang yang paling berharga ❤️</p>
         
-        <div class="cake-container">
-            <div class="cake">
-                <div class="decorations">
-                    <div class="decoration"></div>
-                    <div class="decoration"></div>
-                    <div class="decoration"></div>
-                    <div class="decoration"></div>
+        <div class="cake-with-photos">
+            <!-- Photos Left Side -->
+            <div class="side-photos left-photos">
+                <div class="photo-frame" style="--rotation: -5deg; --delay: 0s;">
+                    <img src="foto 1.jpeg" alt="Foto 1" onerror="this.style.display='none'">
+                    <div class="photo-decoration">❤️</div>
+                </div>
+                <div class="photo-frame" style="--rotation: 3deg; --delay: 0.2s;">
+                    <img src="foto 2.jpeg" alt="Foto 2" onerror="this.style.display='none'">
+                    <div class="photo-decoration">✨</div>
+                </div>
+                <div class="photo-frame" style="--rotation: -2deg; --delay: 0.4s;">
+                    <img src="foto 3.jpeg" alt="Foto 3" onerror="this.style.display='none'">
+                    <div class="photo-decoration">💕</div>
                 </div>
             </div>
             
-            <div class="candles">
-                <div class="candle" onclick="lightCandle(this)">
-                    <div class="wick"></div>
-                    <div class="flame"></div>
+            <!-- Cake Container -->
+            <div class="cake-container" id="cakeContainer">
+                <div class="cake">
+                    <div class="decorations">
+                        <div class="decoration"></div>
+                        <div class="decoration"></div>
+                        <div class="decoration"></div>
+                        <div class="decoration"></div>
+                    </div>
                 </div>
-                <div class="candle" onclick="lightCandle(this)">
-                    <div class="wick"></div>
-                    <div class="flame"></div>
+                
+                <div class="candles">
+                    <div class="candle" onclick="lightCandle(this)">
+                        <div class="wick"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" onclick="lightCandle(this)">
+                        <div class="wick"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" onclick="lightCandle(this)">
+                        <div class="wick"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" onclick="lightCandle(this)">
+                        <div class="wick"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" onclick="lightCandle(this)">
+                        <div class="wick"></div>
+                        <div class="flame"></div>
+                    </div>
                 </div>
-                <div class="candle" onclick="lightCandle(this)">
-                    <div class="wick"></div>
-                    <div class="flame"></div>
+            </div>
+            
+            <!-- Photos Right Side -->
+            <div class="side-photos right-photos">
+                <div class="photo-frame" style="--rotation: 4deg; --delay: 0.1s;">
+                    <img src="foto 4.jpeg" alt="Foto 4" onerror="this.style.display='none'">
+                    <div class="photo-decoration">🌹</div>
                 </div>
-                <div class="candle" onclick="lightCandle(this)">
-                    <div class="wick"></div>
-                    <div class="flame"></div>
+                <div class="photo-frame" style="--rotation: -3deg; --delay: 0.3s;">
+                    <img src="foto 5.jpeg" alt="Foto 5" onerror="this.style.display='none'">
+                    <div class="photo-decoration">🌟</div>
                 </div>
-                <div class="candle" onclick="lightCandle(this)">
-                    <div class="wick"></div>
-                    <div class="flame"></div>
+                <div class="photo-frame" style="--rotation: 2deg; --delay: 0.5s;">
+                    <img src="foto 6.jpeg" alt="Foto 6" onerror="this.style.display='none'">
+                    <div class="photo-decoration">💖</div>
                 </div>
             </div>
         </div>
@@ -55,9 +93,8 @@
         </div>
         
         <div class="blow-instruction" id="blowInstruction">
-  Sekarang tiup lilinnya dengan menyentuh layar! 💨
-</div>
-
+            Sekarang tiup lilinnya dengan menyentuh layar! 💨
+        </div>
         
         <div class="romantic-message" id="romanticMessage">
             <div class="paper-envelope" onclick="openLetter()">
@@ -92,6 +129,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Audio Element untuk lagu Anda -->
+    <audio id="backgroundMusic" loop>
+        <source src="Jamrud - Selamat Ulang Tahun.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
     <script src="script.js"></script>
 </body>
 </html>
